@@ -370,7 +370,7 @@ function JSONP(url) {
 
     function remove() {
         delete window[callbackName];
-        script.parentNode.removeChild(script);
+        script && script.parentNode && script.parentNode.removeChild(script);
         script = null;
     }
 
